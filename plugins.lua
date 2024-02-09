@@ -47,7 +47,8 @@ local plugins = {
                 "ruff",
                 "pyright",
             }
-        }
+        },
+      PATH = "prepend"
     },
 
 }

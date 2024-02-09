@@ -6,5 +6,13 @@ local capabilities = config.capabilities
 local lspconfig = require("lspconfig")
 
 lspconfig.pyright.setup({
-  filetypes = {"python"},
+  filetypes = {"python", "lua"},
+  on_attach = on_attach,
+  capabilities = capabilities
+})
+
+lspconfig.clangd.setup({
+  filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "proto"},
+  on_attach = on_attach,
+  capabilities = capabilities
 })
