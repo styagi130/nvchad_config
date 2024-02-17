@@ -46,9 +46,16 @@ local plugins = {
                 "mypy",
                 "ruff",
                 "pyright",
+                "lua-language-server",
+                "clangd",
+                "clang-format",
+                "codelldb",
             }
         },
       PATH = "prepend"
+    },
+    {
+      "williamboman/mason-lspconfig.nvim"
     },
 
 }

@@ -13,6 +13,10 @@ lspconfig.pyright.setup({
 
 lspconfig.clangd.setup({
   filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "proto"},
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr)
+  end,
   capabilities = capabilities
 })
+
